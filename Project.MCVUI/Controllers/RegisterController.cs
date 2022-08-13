@@ -41,6 +41,7 @@ namespace Project.MCVUI.Controllers
                 return View();
             }
 
+            //register işlemi başarılıysa aktivasyon kodu gönder
             string gonderilecekEmail = "Tebrikler... Hesabınız Oluşturulmuştur... Hesabınızı aktive etmek için https://localhost:44363/Register/Activation/" + appUser.ActivationCode + " linkine tıklayınız";
 
             MailService.Send(appUser.Email, body: gonderilecekEmail, subject: "Hesap aktivasyonu!!!");
@@ -55,6 +56,20 @@ namespace Project.MCVUI.Controllers
         public ActionResult RegisterOK()
         {
             return View();
+        }
+        public ActionResult Activation(Guid id)
+        {
+            AppUser aktifEdilecek = _apRep.FirstOrDefault(x => x.ActivationCode == id);
+            if (aktifEdilecek != null)
+            {
+                aktifEdilecek.Active = true;
+                _apRep.Update(aktifEdilecek);
+                TempData["HesapAktifmi"] = "Hesabınız aktif hale getirildi";
+                return RedirectToAction("Login","Home");
+            }
+            //şüpheli aktivite
+            TempData["HesapAktifmi"] = "Hesabınız bulunamadı";
+            return RedirectToAction("Login", "Home");
         }
     }
 }
