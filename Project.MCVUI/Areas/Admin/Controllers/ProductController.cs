@@ -1,6 +1,7 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
 using Project.MCVUI.Areas.Admin.AdminVMClasses;
+using Project.MCVUI.AuthenticationClasses;
 using Project.MCVUI.Tools;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ using System.Web.Mvc;
 
 namespace Project.MCVUI.Areas.Admin.Controllers
 {
+    [AdminAuthentication]
+
     public class ProductController : Controller
     {
         ProductRepository _pRep;

@@ -1,6 +1,7 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
 using Project.MCVUI.Areas.Admin.AdminVMClasses;
+using Project.MCVUI.AuthenticationClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace Project.MCVUI.Areas.Admin.Controllers
 {
+    [AdminAuthentication]
     public class CategoryController : Controller
     {
         CategoryRepository _cRep;

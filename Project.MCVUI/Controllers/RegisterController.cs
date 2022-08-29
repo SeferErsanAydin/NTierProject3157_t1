@@ -45,7 +45,10 @@ namespace Project.MCVUI.Controllers
             string gonderilecekEmail = "Tebrikler... Hesabınız Oluşturulmuştur... Hesabınızı aktive etmek için https://localhost:44363/Register/Activation/" + appUser.ActivationCode + " linkine tıklayınız";
 
             MailService.Send(appUser.Email, body: gonderilecekEmail, subject: "Hesap aktivasyonu!!!");
+
             _apRep.Add(appUser);
+
+
             if (!string.IsNullOrEmpty(userProfile.FirstName.Trim())|| !string.IsNullOrEmpty(userProfile.LastName.Trim()))
             {
                 userProfile.ID = appUser.ID;
