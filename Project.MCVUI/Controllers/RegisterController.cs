@@ -49,7 +49,7 @@ namespace Project.MCVUI.Controllers
             _apRep.Add(appUser);
 
 
-            if (!string.IsNullOrEmpty(userProfile.FirstName.Trim())|| !string.IsNullOrEmpty(userProfile.LastName.Trim()))
+            if (!string.IsNullOrEmpty(userProfile.FirstName.Trim()) || !string.IsNullOrEmpty(userProfile.LastName.Trim()))
             {
                 userProfile.ID = appUser.ID;
                 _proRep.Add(userProfile);
@@ -74,5 +74,6 @@ namespace Project.MCVUI.Controllers
             TempData["HesapAktifmi"] = "Hesabınız bulunamadı";
             return RedirectToAction("Login", "Home");
         }
+
     }
 }

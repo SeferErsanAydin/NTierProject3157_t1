@@ -2042,6 +2042,8 @@
     <Content Include="Views\Register\RegisterNow.cshtml" />
     <Content Include="Views\Register\RegisterOK.cshtml" />
     <Content Include="Views\Shopping\ShoppingList.cshtml" />
+    <Content Include="Views\Shopping\ConfirmOrder.cshtml" />
+    <Content Include="Views\Shopping\CartPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

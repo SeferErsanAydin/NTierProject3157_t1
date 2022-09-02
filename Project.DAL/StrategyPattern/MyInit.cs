@@ -15,6 +15,7 @@ namespace Project.DAL.StrategyPattern
     {
         protected override void Seed(MyContext context)
         {
+            // tamamen deneme amaçlıdır, DB in ilk triggeringde Manuel olarak admin ve bogus kütüphanesinin yardımı ile kullanıcı , katergori ve ürün bilgileri oluşturulmuştur.
             #region Admin
 
             AppUser au = new AppUser();

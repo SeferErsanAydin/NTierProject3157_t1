@@ -92,6 +92,16 @@ namespace Project.MCVUI.Controllers
             }
             return RedirectToAction("ShoppingList");
         }
+        public ActionResult ConfirmOrder()
+        {
+            AppUser currentUser;
+            if (Session["member"] != null)
+            {
+                currentUser = Session["member"] as AppUser;
+            }
+            else TempData["anonim"] = "Kullanici üye değil";
+            return View();
+        }
 
         // https://localhost:44366/api/Payment/ReceivePayment
 

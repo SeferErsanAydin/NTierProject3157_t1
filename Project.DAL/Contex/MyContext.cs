@@ -14,7 +14,7 @@ namespace Project.DAL.Contex
     {
         public MyContext():base("MyConnectionWin")
         {
-            Database.SetInitializer(new MyInit());
+            Database.SetInitializer(new MyInit()); //strategy patternimiz MyInit burada çağırılıyor.
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
