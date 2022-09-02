@@ -18,9 +18,9 @@ namespace Project.DAL.StrategyPattern
             #region Admin
 
             AppUser au = new AppUser();
-            au.UserName = "cgr";
+            au.UserName = "ers";
             au.Password = DantexCrypt.Crypt("123");
-            au.Email = "cagri.yolyapar@gmail.com";
+            au.Email = "ersanaydin@outlook.com";
             au.Role = ENTITIES.Enums.UserRole.Admin;
             au.Active = true;
             context.AppUsers.Add(au);

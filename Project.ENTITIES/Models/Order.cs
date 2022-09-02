@@ -9,6 +9,10 @@ namespace Project.ENTITIES.Models
     public class Order : BaseEntity
     {
         public string ShippedAddress { get; set; }
+        public decimal TotalPrice { get; set; } //kolaylık saglaması için bu property buraya açıldı
+        public string UserName { get; set; }
+        public string Email { get; set; }
+
         public int? AppUserID { get; set; }
         public int? ShipperID { get; set; }
         //relational properties

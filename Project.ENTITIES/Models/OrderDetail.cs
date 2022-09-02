@@ -10,6 +10,8 @@ namespace Project.ENTITIES.Models
     {
         public int OrderID { get; set; }
         public int ProductID { get; set; }
+        public decimal TotalPrice { get; set; }
+        public short Quantity { get; set; }
         //relational properties
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
